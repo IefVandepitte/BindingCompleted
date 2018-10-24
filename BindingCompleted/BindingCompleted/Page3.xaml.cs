@@ -37,14 +37,14 @@ namespace BindingCompleted
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            bool hasContainer = localSettings.Containers.ContainsKey(valueContainer);
-            bool hasSetting = false;
-            if (hasContainer)
-            {
-                hasSetting = localSettings.Containers[valueContainer].Values.ContainsKey(values);
-            }
-            if (hasSetting)
-            {
+            //bool hasContainer = localSettings.Containers.ContainsKey(valueContainer);
+            //bool hasSetting = false;
+            //if (hasContainer)
+            //{
+            //    hasSetting = localSettings.Containers[valueContainer].Values.ContainsKey(values);
+            //}
+            //if (hasSetting)
+            //{
                 var values = e.Parameter;
                 if (values != null && values.GetType() == typeof(List<Tuple<string, double>>))
                 {
@@ -58,7 +58,7 @@ namespace BindingCompleted
                 }
                 
 
-            }
+            //}
 
             var input = e.Parameter;
             if (input != null && input.GetType() == typeof(Tuple<String, double>))
