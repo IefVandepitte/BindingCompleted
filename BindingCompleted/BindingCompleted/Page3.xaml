@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="BindingCompleted.Page3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BindingCompleted"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock x:Name="page3TExtBlock" HorizontalAlignment="Left" Margin="10,10,0,0" Text="page 3" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="toegevoegdTextBLock" HorizontalAlignment="Left" Margin="380,30,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="363,165,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <GridView x:Name="StatsGridView" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="377" Height="923" ItemsSource="{Binding}">
+          
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="2">
+                        <TextBlock Text="Person: " Margin="2"/>
+                        <TextBlock Text="{Binding Name}" Margin="2"/>
+                        <TextBlock Text="Weight: " Margin="2"/>
+                        <TextBlock Text="{Binding Weight}" Margin="2"/>
+                    </StackPanel>  
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+    </Grid>
+</Page>
